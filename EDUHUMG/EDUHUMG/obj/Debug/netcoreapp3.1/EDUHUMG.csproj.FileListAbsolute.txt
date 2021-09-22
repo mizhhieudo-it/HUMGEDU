@@ -6,7 +6,6 @@ G:\Project\EDUHUMG\EDUHUMG\EDUHUMG\bin\Debug\netcoreapp3.1\EDUHUMG.runtimeconfig
 G:\Project\EDUHUMG\EDUHUMG\EDUHUMG\bin\Debug\netcoreapp3.1\EDUHUMG.runtimeconfig.dev.json
 G:\Project\EDUHUMG\EDUHUMG\EDUHUMG\bin\Debug\netcoreapp3.1\EDUHUMG.dll
 G:\Project\EDUHUMG\EDUHUMG\EDUHUMG\bin\Debug\netcoreapp3.1\EDUHUMG.pdb
-G:\Project\EDUHUMG\EDUHUMG\EDUHUMG\obj\Debug\netcoreapp3.1\EDUHUMG.csproj.AssemblyReference.cache
 G:\Project\EDUHUMG\EDUHUMG\EDUHUMG\obj\Debug\netcoreapp3.1\EDUHUMG.GeneratedMSBuildEditorConfig.editorconfig
 G:\Project\EDUHUMG\EDUHUMG\EDUHUMG\obj\Debug\netcoreapp3.1\EDUHUMG.AssemblyInfoInputs.cache
 G:\Project\EDUHUMG\EDUHUMG\EDUHUMG\obj\Debug\netcoreapp3.1\EDUHUMG.AssemblyInfo.cs
