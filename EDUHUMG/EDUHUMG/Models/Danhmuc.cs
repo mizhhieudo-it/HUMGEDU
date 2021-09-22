@@ -7,11 +7,15 @@ namespace EDUHUMG.Models
 {
     public partial class Danhmuc
     {
+        public Danhmuc()
+        {
+            Khoahocs = new HashSet<Khoahoc>();
+        }
+
         public int Iddanhmuc { get; set; }
         public string Tendanhmuc { get; set; }
         public string Linkdanhmuc { get; set; }
-        public int Idkhoahoc { get; set; }
 
-        public virtual Khoahoc IdkhoahocNavigation { get; set; }
+        public virtual ICollection<Khoahoc> Khoahocs { get; set; }
     }
 }

@@ -38,27 +38,58 @@ namespace EDUHUMG.Models
 
             modelBuilder.Entity<Baihoc>(entity =>
             {
-                entity.HasKey(e => e.Idbaihoc);
+                entity.HasKey(e => e.Idbaihoc)
+                    .HasName("PK_chitietbaihoc");
 
                 entity.ToTable("baihoc");
 
                 entity.Property(e => e.Idbaihoc).HasColumnName("idbaihoc");
 
+                entity.Property(e => e.Idkhoahoc).HasColumnName("idkhoahoc");
+
                 entity.Property(e => e.Linkbaihoc)
+                    .IsRequired()
                     .HasColumnType("text")
                     .HasColumnName("linkbaihoc");
 
                 entity.Property(e => e.Linkvideobaihoc)
+                    .IsRequired()
                     .HasColumnType("text")
                     .HasColumnName("linkvideobaihoc");
 
                 entity.Property(e => e.Motabaihoc)
+                    .IsRequired()
                     .HasColumnType("text")
                     .HasColumnName("motabaihoc");
 
-                entity.Property(e => e.Tenbaihoc)
+                entity.Property(e => e.Nguoisuabaihoc)
+                    .HasMaxLength(50)
+                    .HasColumnName("nguoisuabaihoc");
+
+                entity.Property(e => e.Nguoitaobaihoc)
+                    .HasMaxLength(50)
+                    .HasColumnName("nguoitaobaihoc");
+
+                entity.Property(e => e.Thoigiansuabaihoc)
+                    .HasColumnType("date")
+                    .HasColumnName("thoigiansuabaihoc");
+
+                entity.Property(e => e.Thoigiantaobaihoc)
+                    .HasColumnType("date")
+                    .HasColumnName("thoigiantaobaihoc");
+
+                entity.Property(e => e.Tieudebaihoc)
+                    .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("tenbaihoc");
+                    .HasColumnName("tieudebaihoc");
+
+                entity.Property(e => e.Trangthaibaihoc).HasColumnName("trangthaibaihoc");
+
+                entity.HasOne(d => d.IdkhoahocNavigation)
+                    .WithMany(p => p.Baihocs)
+                    .HasForeignKey(d => d.Idkhoahoc)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_baihoc_khoahoc");
             });
 
             modelBuilder.Entity<Danhmuc>(entity =>
@@ -69,8 +100,6 @@ namespace EDUHUMG.Models
 
                 entity.Property(e => e.Iddanhmuc).HasColumnName("iddanhmuc");
 
-                entity.Property(e => e.Idkhoahoc).HasColumnName("idkhoahoc");
-
                 entity.Property(e => e.Linkdanhmuc)
                     .IsRequired()
                     .HasColumnName("linkdanhmuc");
@@ -79,12 +108,6 @@ namespace EDUHUMG.Models
                     .IsRequired()
                     .HasMaxLength(250)
                     .HasColumnName("tendanhmuc");
-
-                entity.HasOne(d => d.IdkhoahocNavigation)
-                    .WithMany(p => p.Danhmucs)
-                    .HasForeignKey(d => d.Idkhoahoc)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_danhmuc_khoahoc");
             });
 
             modelBuilder.Entity<Khoahoc>(entity =>
@@ -93,35 +116,53 @@ namespace EDUHUMG.Models
 
                 entity.ToTable("khoahoc");
 
-                entity.Property(e => e.Idkhoahoc)
-                    .ValueGeneratedNever()
-                    .HasColumnName("idkhoahoc");
+                entity.Property(e => e.Idkhoahoc).HasColumnName("idkhoahoc");
 
-                entity.Property(e => e.Anhmotakhoahoc)
+                entity.Property(e => e.Anhkhoahoc)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("anhmotakhoahoc");
+                    .HasColumnName("anhkhoahoc");
 
-                entity.Property(e => e.Idbaihoc).HasColumnName("idbaihoc");
+                entity.Property(e => e.Iddanhmuc).HasColumnName("iddanhmuc");
 
                 entity.Property(e => e.Linkkhoahoc)
                     .IsRequired()
+                    .HasMaxLength(100)
                     .HasColumnName("linkkhoahoc");
 
                 entity.Property(e => e.Motakhoahoc)
                     .IsRequired()
+                    .HasColumnType("text")
                     .HasColumnName("motakhoahoc");
+
+                entity.Property(e => e.Nguoisuakhoahoc)
+                    .HasMaxLength(50)
+                    .HasColumnName("nguoisuakhoahoc");
+
+                entity.Property(e => e.Nguoitaokhoahoc)
+                    .HasMaxLength(50)
+                    .HasColumnName("nguoitaokhoahoc");
 
                 entity.Property(e => e.Tenkhoahoc)
                     .IsRequired()
-                    .HasMaxLength(250)
+                    .HasMaxLength(100)
                     .HasColumnName("tenkhoahoc");
 
-                entity.HasOne(d => d.IdbaihocNavigation)
+                entity.Property(e => e.Thoigiansuakhoahoc)
+                    .HasColumnType("date")
+                    .HasColumnName("thoigiansuakhoahoc");
+
+                entity.Property(e => e.Thoigiantaokhoahoc)
+                    .HasColumnType("date")
+                    .HasColumnName("thoigiantaokhoahoc");
+
+                entity.Property(e => e.Trangthaikhoahoc).HasColumnName("trangthaikhoahoc");
+
+                entity.HasOne(d => d.IddanhmucNavigation)
                     .WithMany(p => p.Khoahocs)
-                    .HasForeignKey(d => d.Idbaihoc)
+                    .HasForeignKey(d => d.Iddanhmuc)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_khoahoc_baihoc");
+                    .HasConstraintName("FK_khoahoc_danhmuc");
             });
 
             modelBuilder.Entity<Taikhoan>(entity =>
