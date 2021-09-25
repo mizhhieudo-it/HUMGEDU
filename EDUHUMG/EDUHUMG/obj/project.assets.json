@@ -5798,19 +5798,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Do Minh Hieu\\.nuget\\packages\\": {}
+    "C:\\Users\\Admin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\Project\\EDUHUMG\\EDUHUMG\\EDUHUMG\\EDUHUMG.csproj",
+      "projectUniqueName": "F:\\BTL MƠI\\HUMGEDU\\EDUHUMG\\EDUHUMG\\EDUHUMG.csproj",
       "projectName": "EDUHUMG",
-      "projectPath": "G:\\Project\\EDUHUMG\\EDUHUMG\\EDUHUMG\\EDUHUMG.csproj",
-      "packagesPath": "C:\\Users\\Do Minh Hieu\\.nuget\\packages\\",
-      "outputPath": "G:\\Project\\EDUHUMG\\EDUHUMG\\EDUHUMG\\obj\\",
+      "projectPath": "F:\\BTL MƠI\\HUMGEDU\\EDUHUMG\\EDUHUMG\\EDUHUMG.csproj",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "F:\\BTL MƠI\\HUMGEDU\\EDUHUMG\\EDUHUMG\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Do Minh Hieu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
