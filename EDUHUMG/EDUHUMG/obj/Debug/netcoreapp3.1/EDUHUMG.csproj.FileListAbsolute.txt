@@ -125,3 +125,4 @@ E:\BTL\HUMGEDU\EDUHUMG\EDUHUMG\obj\Debug\netcoreapp3.1\EDUHUMG.csproj.CopyComple
 E:\BTL\HUMGEDU\EDUHUMG\EDUHUMG\obj\Debug\netcoreapp3.1\EDUHUMG.dll
 E:\BTL\HUMGEDU\EDUHUMG\EDUHUMG\obj\Debug\netcoreapp3.1\EDUHUMG.pdb
 E:\BTL\HUMGEDU\EDUHUMG\EDUHUMG\obj\Debug\netcoreapp3.1\EDUHUMG.genruntimeconfig.cache
+G:\Project\EDUHUMG\EDUHUMG\EDUHUMG\obj\Debug\netcoreapp3.1\EDUHUMG.csproj.AssemblyReference.cache
