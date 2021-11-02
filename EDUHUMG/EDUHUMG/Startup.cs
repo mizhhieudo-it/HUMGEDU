@@ -32,6 +32,12 @@ namespace EDUHUMG
                 //.UseLazyLoadingProxies()
                 .UseSqlServer(Configuration.GetConnectionString("DefaultConnection"))
                 );
+            services.AddCors(c =>
+            {
+                c.AddPolicy("CorsPolicy", options => options.AllowAnyOrigin()
+                                                            .AllowAnyMethod()
+                                                            .AllowAnyHeader());
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -47,6 +53,7 @@ namespace EDUHUMG
             app.UseRouting();
 
             app.UseAuthorization();
+            app.UseCors("CorsPolicy");
 
             app.UseEndpoints(endpoints =>
             {

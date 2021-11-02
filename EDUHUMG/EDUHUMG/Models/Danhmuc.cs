@@ -7,10 +7,6 @@ namespace EDUHUMG.Models
 {
     public partial class Danhmuc
     {
-        public Danhmuc()
-        {
-            Khoahocs = new HashSet<Khoahoc>();
-        }
 
         public int Iddanhmuc { get; set; }
         public string Tendanhmuc { get; set; }

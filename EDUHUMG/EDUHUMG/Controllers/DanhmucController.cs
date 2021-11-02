@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using EDUHUMG.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,11 +14,16 @@ namespace EDUHUMG.Controllers
     [ApiController]
     public class DanhmucController : ControllerBase
     {
+        private readonly HUMGEDUContext _context;
+        public DanhmucController(HUMGEDUContext context)
+        {
+            _context = context;
+        }
         // GET: api/<DanhmucController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public async Task<IEnumerable<Danhmuc>> GetAllBaihoc()
         {
-            return new string[] { "value1", "value2" };
+            return await _context.Danhmucs.ToListAsync();
         }
 
         // GET api/<DanhmucController>/5
