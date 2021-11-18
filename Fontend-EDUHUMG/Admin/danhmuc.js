@@ -2,8 +2,10 @@ $(function(){
     $.ajax({
         type:'GET',
         url:'https://localhost:5001/api/danhmuc'
-    }).done(function(data){
+    }).done(function(data,xhr,statuscode){
         console.log(data);
+        console.log(xhr);
+        console.log(statuscode);
         for(var element = 0 ; element < data.length;element++){
             var showList;
             showList += `<tr>`;
@@ -64,4 +66,7 @@ function showbtnsave(){
     document.getElementById("btnthem").style.display = "block";
     document.getElementById("btnsua").style.display = "none";
 
+}
+function UpdateDM(id){
+    
 }

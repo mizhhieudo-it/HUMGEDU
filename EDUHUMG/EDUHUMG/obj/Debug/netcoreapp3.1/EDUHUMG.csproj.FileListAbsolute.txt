@@ -60,7 +60,6 @@ G:\Project\EDUHUMG\EDUHUMG\EDUHUMG\bin\Debug\netcoreapp3.1\runtimes\win-x86\nati
 G:\Project\EDUHUMG\EDUHUMG\EDUHUMG\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
 G:\Project\EDUHUMG\EDUHUMG\EDUHUMG\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 G:\Project\EDUHUMG\EDUHUMG\EDUHUMG\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-G:\Project\EDUHUMG\EDUHUMG\EDUHUMG\obj\Debug\netcoreapp3.1\EDUHUMG.csproj.CopyComplete
 E:\BTL\HUMGEDU\EDUHUMG\EDUHUMG\bin\Debug\netcoreapp3.1\appsettings.Development.json
 E:\BTL\HUMGEDU\EDUHUMG\EDUHUMG\bin\Debug\netcoreapp3.1\appsettings.json
 E:\BTL\HUMGEDU\EDUHUMG\EDUHUMG\bin\Debug\netcoreapp3.1\EDUHUMG.exe

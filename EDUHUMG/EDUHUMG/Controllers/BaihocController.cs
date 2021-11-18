@@ -60,5 +60,20 @@ namespace EDUHUMG.Controllers
             var kq = await _context.Baihocs.Where(x => x.Tieudebaihoc.Contains(tenbh)).ToListAsync();
             return StatusCode(200, kq);
         }
+        [HttpGet("SearchByid")]
+        public async Task<IActionResult> SearchById(int id)
+        {
+            var kq = await (from lesson in _context.Baihocs
+                            join cou in _context.Khoahocs
+                            on lesson.Idkhoahoc equals cou.Idkhoahoc
+                            where lesson.Idbaihoc == id
+                            select new
+                            {
+                                less = lesson,
+                                titlecourse =  cou.Tenkhoahoc
+                            }
+                            ).ToListAsync();
+            return StatusCode(200, kq);
+        }
     }
 }
